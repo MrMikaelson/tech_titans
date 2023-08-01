@@ -6,6 +6,7 @@ const flash = require("express-flash");
 const passport = require("passport");
 const session = require("express-session");
 const bodyparser = require("body-parser");
+const path = require("path");
 
 const initializePassport = require("./passportConfig");
 const { Events } = require("pg");
