@@ -33,7 +33,7 @@ app.use(passport.session());
 app.use(flash());
 
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("views/home.ejs");
 });
 
 app.get("/home", (req, res) => {
