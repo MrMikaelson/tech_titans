@@ -16,7 +16,7 @@ app.use(bodyparser.json());
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
-
+app.set("views", path.join(__dirname, "views"));
 app.use(
   session({
     secret: "secret",
@@ -33,7 +33,7 @@ app.use(passport.session());
 app.use(flash());
 
 app.get("/", (req, res) => {
-  res.render("views/home.ejs");
+  res.render("home");
 });
 
 app.get("/home", (req, res) => {
